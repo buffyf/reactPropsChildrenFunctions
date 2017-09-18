@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-
+const styles = {
+    displayStyle: {
+        color: "pink"
+    }
+};
 export default class DisplayComponent extends Component {
     render() {
         return (
-            <div>{this.props.sayWhat}</div>
+            <div style={styles.displayStyle}>{this.props.sayWhat}</div>
         );
     }
 }

@@ -2,6 +2,19 @@ import React, { Component } from 'react';
 import ChildComponent from "./ChildComponent";
 import DisplayComponent from "./DisplayComponent";
 
+const styles = {
+    parentStyle: {
+        textAlign: "center",
+        marginTop: "4rem",
+        padding: "1rem",
+        fontSize: "2rem"
+    },
+    inputStyle: {
+        color: "green",
+        fontSize: "2rem"
+    }
+};
+
 export default class ParentComponent extends Component {
     constructor(props) {
         super(props);
@@ -37,9 +50,9 @@ export default class ParentComponent extends Component {
     render() {
 
         return (
-            <div>
+            <div style={styles.parentStyle}>
                 <div>
-                    <input onChange={this.handleInput} name={"whatToSay"} value={this.state.whatToSay} type="text" placeholder="Say It, Don't Spray It!" />
+                    <input style={styles.inputStyle} onChange={this.handleInput} name={"whatToSay"} value={this.state.whatToSay} type="text" placeholder="Say It, Don't Spray It!" />
                 </div>
                 <div>
                     <ChildComponent onClick={this.handleSubmit} />

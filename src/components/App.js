@@ -3,10 +3,17 @@ import '../styles/App.css';
 import BaseLayout from "./BaseLayout";
 import ParentComponent from "./ParentComponent";
 
+const styles = {
+  backgroundStyle: {
+    background: "yellow"
+  },
+
+};
+
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div style={styles.backgroundStyle} className="App">
         <BaseLayout>
           <ParentComponent />
         </BaseLayout>
